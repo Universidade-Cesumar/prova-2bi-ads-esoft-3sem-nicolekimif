@@ -8,6 +8,17 @@
 </head>
 <body>
     <h2>Cadastro de Materiais - Almoxarifado</h2>
+    <form id="form-cadastro">
+        <div class="form-group">
+            <label for="input-nome">Material:</label>
+            <input type="text" id="input-nome" required placeholder="Digite o nome do material">
+        </div>
+        <div class="form-group">
+            <label for="input-quantidade">Quantidade:</label>
+            <input type="number" id="input-quantidade" required min="1" placeholder="Digite a quantidade">
+        </div>
+        <button type="submit" id="btn-cadastrar">Cadastrar</button>
+    </form>
 
 </body>
 </html>
