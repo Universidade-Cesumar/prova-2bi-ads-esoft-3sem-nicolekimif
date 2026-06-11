@@ -29,3 +29,28 @@ function renderizarTabela(materiais) {
         listaMateriais.appendChild(tr);
     });
 }
+
+formCadastro.addEventListener("submit", async (event) => {
+    event.preventDefault(); 
+
+    const novoMaterial = {
+        nome: inputNome.value,
+        quantidade: parseInt(inputQuantidade.value, 10)
+    };
+
+    try {
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(novoMaterial)
+        });
+
+        if (!response.ok) throw new Error("Erro ao salvar");
+
+        formCadastro.reset();
+        buscarMateriais(); // Recarrega a lista atualizada
+
+    } catch (error) {
+        console.error("Erro no POST:", error);
+    }
+});
