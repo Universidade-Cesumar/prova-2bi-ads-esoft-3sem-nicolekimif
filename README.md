@@ -6,7 +6,7 @@ O projeto Consome uma API REST hospedada na nuvem (MockAPI) para persistência d
 
 ---
 
-## 🚀 Funcionalidades Atuais (Sprint 1)
+## Funcionalidades Atuais (Sprint 1)
 
 * **Cadastro de Materiais:** Permite adicionar novos itens informando o nome e a quantidade inicial no inventário.
 * **Listagem Dinâmica:** Exibe os materiais atualmente cadastrados direto da nuvem assim que a página é carregada.
@@ -14,7 +14,7 @@ O projeto Consome uma API REST hospedada na nuvem (MockAPI) para persistência d
 
 ---
 
-## 📌 Requisitos obrigatórios
+## Requisitos obrigatórios
 
 Para fins de validação automática da entrega, os seguintes identificadores obrigatórios do HTML foram implementados à risca:
 
@@ -25,7 +25,7 @@ Para fins de validação automática da entrega, os seguintes identificadores ob
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **HTML5:** Estruturação semântica da página de inventário.
 * **CSS3:** Estilização básica e organização visual dos elementos.
