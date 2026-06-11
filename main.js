@@ -58,5 +58,4 @@ formCadastro.addEventListener("submit", async (event) => {
     }
 });
 
-// Inicializa a listagem ao abrir a página
 buscarMateriais();
