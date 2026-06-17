@@ -5,6 +5,13 @@ const inputQuantidade = document.getElementById("input-quantidade");
 const listaMateriais = document.getElementById("lista-materiais");
 const formCadastro = document.getElementById("form-cadastro");
 
+function validarRetirada(estoqueAtual, quantidadeRetirada) {
+    if (quantidadeRetirada <= 0 || quantidadeRetirada > estoqueAtual) {
+        return false;
+    }
+    return true;
+}
+
 async function buscarMateriais() {
     try {
         const response = await fetch(API_URL);
