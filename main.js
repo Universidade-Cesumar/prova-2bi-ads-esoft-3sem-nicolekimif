@@ -87,12 +87,28 @@ async function executarBaixaEstoque(id, novoEstoque) {
         });
 
         if (response.ok) {
-            buscarMateriais();
+            buscarMateriais(); 
         } else {
             throw new Error("Erro ao atualizar o estoque no servidor.");
         }
     } catch (error) {
         console.error("Erro na requisição PUT:", error);
+    }
+}
+
+async function executarExclusao(id) {
+    try {
+        const response = await fetch(`${API_URL}/${id}`, {
+            method: "DELETE"
+        });
+
+        if (response.ok) {
+            buscarMateriais(); 
+        } else {
+            throw new Error("Erro ao excluir o item no servidor.");
+        }
+    } catch (error) {
+        console.error("Erro na requisição DELETE:", error);
     }
 }
 
