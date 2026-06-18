@@ -96,22 +96,6 @@ async function executarBaixaEstoque(id, novoEstoque) {
     }
 }
 
-async function executarExclusao(id) {
-    try {
-        const response = await fetch(`${API_URL}/${id}`, {
-            method: "DELETE"
-        });
-
-        if (response.ok) {
-            buscarMateriais();
-        } else {
-            throw new Error("Erro ao excluir o item no servidor.");
-        }
-    } catch (error) {
-        console.error("Erro na requisição DELETE:", error);
-    }
-}
-
 formCadastro.addEventListener("submit", async (event) => {
     event.preventDefault(); 
     const novoMaterial = {
