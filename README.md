@@ -6,7 +6,7 @@ O projeto Consome uma API REST hospedada na nuvem (MockAPI) para persistência d
 
 ---
 
-## Funcionalidades Atuais (Sprint 1)
+## Funcionalidades (Sprint 1)
 
 * **Cadastro de Materiais:** Permite adicionar novos itens informando o nome e a quantidade inicial no inventário.
 * **Listagem Dinâmica:** Exibe os materiais atualmente cadastrados direto da nuvem assim que a página é carregada.
@@ -14,7 +14,15 @@ O projeto Consome uma API REST hospedada na nuvem (MockAPI) para persistência d
 
 ---
 
-## Requisitos obrigatórios
+## Funcionalidades (Sprint 2)
+
+* **Módulo de Retirada (Baixa de Estoque):** Permite subtrair uma quantidade específica de um item diretamente na linha da tabela através de uma requisição assíncrona `PUT`.
+* **Exclusão de Insumos:** Permite remover definitivamente um material do inventário e do servidor através do método `DELETE`.
+* **Lógica de Validação Rigorosa:** Implementação de uma camada de segurança que impede que o sistema aceite números negativos, zerados ou saídas maiores do que o saldo real disponível em estoque.
+
+---
+
+## Requisitos obrigatórios (Sprint 1)
 
 Para fins de validação automática da entrega, os seguintes identificadores obrigatórios do HTML foram implementados à risca:
 
@@ -22,6 +30,16 @@ Para fins de validação automática da entrega, os seguintes identificadores ob
 * **Input de Quantidade:** `id="input-quantidade"`
 * **Botão de Cadastrar:** `id="btn-cadastrar"`
 * **Tabela ou Lista de Materiais:** `id="lista-materials"`
+
+---
+
+## Requisitos obrigatórios (Sprint 2)
+
+Para fins de validação automática da entrega, os seguintes identificadores obrigatórios do HTML foram implementados à risca:
+
+* **Input de Quantidade a Retirar:** `id="input-retirada"`
+* **Botão de Confirmar Baixa (Classe):** `class="btn-baixar"`
+* **Botão de Excluir Item (Classe):** `class="btn-excluir"`
 
 ---
 
