@@ -37,6 +37,10 @@ function renderizarTabela(materiais) {
     materiais.forEach(material => {
         const tr = document.createElement("tr");
         
+        if (material.quantidade < 10) {
+            tr.classList.add("estoque-critico");
+        }
+        
         tr.innerHTML = `
             <td>${material.nome}</td>
             <td><strong>${material.quantidade}</strong></td>
