@@ -24,7 +24,7 @@ O projeto Consome uma API REST hospedada na nuvem (MockAPI) para persistência d
 
 ---
 
-### Funcionalidades (Sprint 3)
+## Funcionalidades (Sprint 3)
 * **Barra de Pesquisa Dinâmica:** Permite filtrar e encontrar insumos instantaneamente pelo nome enquanto o utilizador digita.
 * **Dashboard Informativo:** Exibe o totalizador em tempo real com a contagem exata de itens cadastrados no sistema.
 * **Alertas de Estoque Crítico:** Identifica de forma visual e imediata qualquer material que possua menos de 10 unidades em estoque, colorindo a linha da tabela.
