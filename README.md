@@ -1,3 +1,5 @@
+**Link do Projeto em Produção:[**https://universidade-cesumar.github.io/prova-2bi-ads-esoft-3sem-nicolekimif/]
+
 # Controle de Estoque - Almoxarifado (Enfermagem)
 
 Este projeto consiste no desenvolvimento da base de um sistema de controle de almoxarifado voltado para a área de saúde (Enfermagem), projetado para substituir o gerenciamento manual e planilhas estáticas de Excel. O sistema visa automatizar fluxos de entrada e saída, facilitando a rotina de quem gerencia o estoque em tempo real.
