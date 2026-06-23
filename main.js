@@ -40,7 +40,7 @@ function renderizarTabela(materiais) {
         if (material.quantidade < 10) {
             tr.classList.add("estoque-critico");
         }
-        
+
         tr.innerHTML = `
             <td>${material.nome}</td>
             <td><strong>${material.quantidade}</strong></td>
@@ -58,6 +58,16 @@ function renderizarTabela(materiais) {
 
     atribuirEventosAcoes();
 }
+
+inputBusca.addEventListener("input", (event) => {
+    const termoPesquisa = event.target.value.toLowerCase();
+    
+    const materiaisFiltrados = todosOsMateriais.filter(material => 
+        material.nome.toLowerCase().includes(termoPesquisa)
+    );
+    
+    renderizarTabela(materiaisFiltrados);
+});
 
 function atribuirEventosAcoes() {
     document.querySelectorAll(".btn-baixar").forEach(botao => {
