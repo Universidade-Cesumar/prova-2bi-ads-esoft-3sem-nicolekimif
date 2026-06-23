@@ -48,7 +48,7 @@ function renderizarTabela(materiais) {
             <td>${material.nome}</td>
             <td><strong>${material.quantidade}</strong></td>
             <td>
-                <input type="number" class="input-retirada-item" placeholder="Qtd" min="1" id="input-retirada">
+                <input type="number" class="input-retirada-item" placeholder="Qtd" min="1">
             </td>
             <td>
                 <button class="btn-baixar" data-id="${material.id}" data-estoque="${material.quantidade}">Baixar</button>
@@ -79,7 +79,7 @@ function atribuirEventosAcoes() {
             const estoqueAtual = parseInt(event.target.getAttribute("data-estoque"), 10);
             
             const linha = event.target.closest("tr");
-            const inputRetirada = linha.querySelector("#input-retirada");
+            const inputRetirada = linha.querySelector(".input-retirada-item");
             const quantidadeRetirada = parseInt(inputRetirada.value, 10);
 
             if (!validarRetirada(estoqueAtual, quantidadeRetirada)) {
