@@ -22,10 +22,12 @@ async function buscarMateriais() {
         const response = await fetch(API_URL);
         if (!response.ok) throw new Error("Erro ao buscar dados da API");
         
-        const materiais = await response.json();
-        renderizarTabela(materiais);
+        todosOsMateriais = await response.json();
+        
+        renderizarTabela(todosOsMateriais);
     } catch (error) {
         console.error("Erro na requisição GET:", error);
+        alert("Não foi possível carregar os dados. Verifique sua conexão com a internet.");
     }
 }
 
@@ -40,15 +42,16 @@ function renderizarTabela(materiais) {
         if (material.quantidade < 10) {
             tr.classList.add("estoque-critico");
         }
-
+        
         tr.innerHTML = `
+            <td>${material.id}</td>
             <td>${material.nome}</td>
             <td><strong>${material.quantidade}</strong></td>
             <td>
                 <input type="number" class="input-retirada-item" placeholder="Qtd" min="1" id="input-retirada">
             </td>
             <td>
-                <button class="btn-baixar" data-id="${material.id}" data-estoque="${material.quantidade}">Retirar</button>
+                <button class="btn-baixar" data-id="${material.id}" data-estoque="${material.quantidade}">Baixar</button>
                 <button class="btn-excluir" data-id="${material.id}">Excluir</button>
             </td>
         `;
@@ -80,7 +83,7 @@ function atribuirEventosAcoes() {
             const quantidadeRetirada = parseInt(inputRetirada.value, 10);
 
             if (!validarRetirada(estoqueAtual, quantidadeRetirada)) {
-                alert("Operação inválida! Verifique se o valor é negativo ou maior que o estoque.");
+                alert("Operação inválida! Valor negativo ou maior que o estoque.");
                 return;
             }
 
@@ -114,6 +117,7 @@ async function executarBaixaEstoque(id, novoEstoque) {
         }
     } catch (error) {
         console.error("Erro na requisição PUT:", error);
+        alert("Erro ao reduzir estoque. Tente novamente mais tarde.");
     }
 }
 
@@ -130,6 +134,7 @@ async function executarExclusao(id) {
         }
     } catch (error) {
         console.error("Erro na requisição DELETE:", error);
+        alert("Não foi possível excluir o item. Tente novamente.");
     }
 }
 
@@ -150,9 +155,12 @@ formCadastro.addEventListener("submit", async (event) => {
         if (response.ok) {
             formCadastro.reset();
             buscarMateriais();
+        } else {
+            throw new Error("Erro ao salvar material.");
         }
     } catch (error) {
         console.error("Erro na requisição POST:", error);
+        alert("Erro de rede ao cadastrar. Verifique sua conexão.");
     }
 });
 
