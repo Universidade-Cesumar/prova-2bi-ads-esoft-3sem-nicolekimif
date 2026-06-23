@@ -1,134 +1,77 @@
 body {
     font-family: sans-serif;
     max-width: 600px;
-    margin: 40px auto;
-    padding: 0 20px;
-    color: #333;
+    margin: 20px auto;
+    padding: 0 15px;
 }
 
-h2 {
-    margin-top: 30px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 5px;
-}
-
-form {
-    background: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+form, .dashboard-controles {
+    background: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
 }
 
 form div {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
     font-weight: bold;
 }
 
 input {
     width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 6px;
     box-sizing: border-box;
 }
 
 button {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#btn-cadastrar {
+    width: 100%;
     background: #28a745;
     color: white;
     border: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background: #218838;
-}
-
-/* [Sprint 3] Estilização do Dashboard e Busca */
-.dashboard-controles {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 15px;
-    background: #f0f4f8;
-    padding: 15px;
-    border-radius: 4px;
-}
-
-.dashboard-controles p {
-    margin: 0;
-    font-weight: bold;
-}
-
-#total-itens {
-    color: #007bff;
-    font-size: 1.1em;
-}
-
-/* Estrutura da Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-.input-retirada-item {
-    width: 70px;
-    padding: 5px;
-    text-align: center;
+    margin-top: 5px;
 }
 
 .btn-baixar {
-    background: #007bff;
+    background: #e9ba20;
     color: white;
     border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-.btn-baixar:hover {
-    background: #0056b3;
 }
 
 .btn-excluir {
     background: #dc3545;
     color: white;
     border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-.btn-excluir:hover {
-    background: #bd2130;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-/* [0,5 pt] CLASSE OBRIGATÓRIA: Alerta visual para estoque menor que 10 unidades */
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #eaeaea;
+}
+
+.input-retirada-item {
+    width: 60px;
+}
+
 .estoque-critico {
     background-color: #f8d7da !important;
     color: #721c24;
-}
-
-.estoque-critico strong {
-    color: #dc3545;
 }
