@@ -32,6 +32,8 @@ async function buscarMateriais() {
 function renderizarTabela(materiais) {
     listaMateriais.innerHTML = ""; 
 
+    totalItens.textContent = materiais.length;
+
     materiais.forEach(material => {
         const tr = document.createElement("tr");
         
