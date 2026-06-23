@@ -5,6 +5,11 @@ const inputQuantidade = document.getElementById("input-quantidade");
 const listaMateriais = document.getElementById("lista-materiais");
 const formCadastro = document.getElementById("form-cadastro");
 
+const inputBusca = document.getElementById("input-busca");
+const totalItens = document.getElementById("total-itens");
+
+let todosOsMateriais = [];
+
 function validarRetirada(estoqueAtual, quantidadeRetirada) {
     if (quantidadeRetirada <= 0 || quantidadeRetirada > estoqueAtual) {
         return false;
