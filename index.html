@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang='pt-br'>
+<html lang="pt-BR">
 <head>
-    <meta charset='utf-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Estoque - Almoxarifado</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h2>Cadastro de Materiais - Almoxarifado</h2>
+
+    <h2>Cadastro de Materiais (Almoxarifado)</h2>
+    
     <form id="form-cadastro">
-        <div class="form-group">
-            <label for="input-nome">Material:</label>
-            <input type="text" id="input-nome" required placeholder="Digite o nome do material">
+        <div>
+            <label for="input-nome">Nome do Material:</label>
+            <input type="text" id="input-nome" required placeholder="Ex: Seringa, Gaze...">
         </div>
-        <div class="form-group">
+        <div>
             <label for="input-quantidade">Quantidade:</label>
-            <input type="number" id="input-quantidade" required min="1" placeholder="Digite a quantidade">
+            <input type="number" id="input-quantidade" required min="1" placeholder="Ex: 100">
         </div>
         <button type="submit" id="btn-cadastrar">Cadastrar</button>
     </form>
 
-    <h2>Lista de Materiais</h2>
+    <h2>Dashboard e Consulta</h2>
+    <div class="dashboard-controles">
+        <input type="text" id="input-busca" placeholder="Pesquisar material pelo nome...">
+    </div>
 
+    <h2>Lista de Materiais</h2>
     <table>
         <thead>
             <tr>
@@ -32,7 +37,8 @@
                 <th>Ações</th>
             </tr>
         </thead>
-        <tbody id="lista-materiais"></tbody>
+        <tbody id="lista-materiais">
+            </tbody>
     </table>
 
     <script src="main.js"></script>
