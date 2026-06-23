@@ -44,14 +44,13 @@ function renderizarTabela(materiais) {
         }
         
         tr.innerHTML = `
-            <td>${material.id}</td>
             <td>${material.nome}</td>
             <td><strong>${material.quantidade}</strong></td>
             <td>
                 <input type="number" class="input-retirada-item" placeholder="Qtd" min="1">
             </td>
             <td>
-                <button class="btn-baixar" data-id="${material.id}" data-estoque="${material.quantidade}">Baixar</button>
+                <button class="btn-baixar" data-id="${material.id}" data-estoque="${material.quantidade}">Retirar</button>
                 <button class="btn-excluir" data-id="${material.id}">Excluir</button>
             </td>
         `;
